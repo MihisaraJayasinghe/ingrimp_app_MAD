@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">MADUI</string>
     <string name="recipe_name">Milk rice</string>
+    <string name="recipie_name">Milk Rice(kiribath)</string>
+    <string name="cook_time">1 hour</string>
+    <string name="ingredient">"Example ingredient "</string>
+    <string name="How_to_make">Add water and 1 tsp salt (keep rest of the salt for after). Cook your rice using your usual method. If you\'re using a rice cooker, turn on the cook switch. If you\'re using an instant pot, press the rice preset. All you do here is cook rice the normal way but with just a little bit of water than you’d normally use.</string>
+    <string name="ingredient_name">Coconut Milk</string>
+    <string name="amount">1L</string>
+    <string name="RecipieNameinput">Recipie Name</string>
+    <string name="addHowToMake">Add How To Make</string>
+    <string name="userSubmitRecipeName">"Example Recipe "</string>
 
 </resources>
