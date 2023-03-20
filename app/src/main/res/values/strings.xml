@@ -10,5 +10,6 @@
     <string name="RecipieNameinput">Recipie Name</string>
     <string name="addHowToMake">Add How To Make</string>
     <string name="userSubmitRecipeName">"Example Recipe "</string>
+    <string name="recipe">ra</string>
 
 </resources>

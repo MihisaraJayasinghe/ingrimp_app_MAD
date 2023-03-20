@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="topbar">t</dimen>
+    <dimen name="search">search</dimen>
+    <dimen name="enteringrident">ingred</dimen>
+    <dimen name="groceryList">grocery List</dimen>
+    <dimen name="searchName">s</dimen>
+    <dimen name="button">submit</dimen>
+    <dimen name="grocerylist">gcl</dimen>
+    <dimen name="ingredientname">milkrice</dimen>
+    <dimen name="recipename">r</dimen>
+    <dimen name="addImages">image</dimen>
+</resources>

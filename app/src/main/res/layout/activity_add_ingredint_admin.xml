@@ -77,106 +77,73 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
-        android:layout_marginTop="67dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="102dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/RecipieNameinput"
+        android:text="ingredient  name "
         android:textAlignment="center"
-        android:textSize="@dimen/recipename"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="57dp"
-        android:src="@drawable/background_for_add_ingredients"
+        android:textSize="@dimen/searchName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
-
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="276dp"
-        android:layout_height="129dp"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="452dp"
-        android:layout_marginEnd="57dp"
-        android:scaleX="2"
-        android:src="@drawable/background_for_add_ingredients"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Add Ingredients"
-        app:layout_constraintEnd_toEndOf="@+id/imageView12"
-        app:layout_constraintStart_toStartOf="@+id/imageView12"
-        app:layout_constraintTop_toTopOf="@+id/imageView12" />
-
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="86dp"
-        android:layout_height="82dp"
-        android:src="@drawable/round_add_circle_24"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView12"
-        app:layout_constraintEnd_toEndOf="@+id/imageView12"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/imageView12" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="141dp"
-        android:layout_marginTop="22dp"
         android:layout_marginEnd="142dp"
         android:backgroundTint="#000000"
         android:text="Add Images"
-        android:textSize="@dimen/addImages"
         app:cornerRadius="40dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+        tools:layout_editor_absoluteY="254dp" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="141dp"
-        android:layout_marginTop="80dp"
         android:layout_marginEnd="142dp"
         android:backgroundTint="#F44336"
-        android:text="Submit for approval"
+        android:text="Submit "
+        android:textSize="@dimen/button"
         app:cornerRadius="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+        tools:layout_editor_absoluteY="540dp" />
 
     <EditText
         android:id="@+id/editTextTextPersonName4"
         android:layout_width="264dp"
         android:layout_height="107dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/addHowToMake"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/imageView15"
-        app:layout_constraintStart_toStartOf="@+id/imageView15"
-        app:layout_constraintTop_toTopOf="@+id/imageView15" />
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="1060dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="454dp"
+        android:layout_height="86dp"
+        android:backgroundTint="#F44336"
+        tools:layout_editor_absoluteX="-22dp"
+        tools:layout_editor_absoluteY="-12dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="454dp"
+        android:layout_height="86dp"
+        android:backgroundTint="#F44336"
+        tools:layout_editor_absoluteX="-22dp"
+        tools:layout_editor_absoluteY="720dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -38,8 +38,8 @@
 
     <ImageView
         android:id="@+id/searchnavbtn"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="180dp"
         android:layout_marginBottom="16dp"
         android:scaleX="1.5"
@@ -82,9 +82,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/inter_extrabold"
-        android:text="Grocery List"
+        android:text="view ingredients "
         android:textColor="#000000"
-        android:textSize="@dimen/grocerylist"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -101,8 +101,8 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="357dp"
-        android:layout_height="314dp"
+        android:layout_width="344dp"
+        android:layout_height="315dp"
         android:layout_marginStart="22dp"
         android:layout_marginEnd="35dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,7 +116,6 @@
 
 
             <TableLayout
-                android:id="@+id/GrocerlyListtable"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -126,195 +125,11 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp">
 
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="274dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ingredient_name"
-                        android:textSize="16sp" />
-
-
-                    <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="52dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/amount"
-                        android:textSize="16sp" />
-
-
-
-                    <CheckBox
-                        android:id="@+id/checkBox"
+                    <ImageView
+                        android:id="@+id/imageView19"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CheckBox" />
-
-
-                </TableRow>
-
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp">
-
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="274dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ingredient_name"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="52dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/amount"
-                        android:textSize="16sp" />
-
-
-
-
-                    <CheckBox
-                        android:id="@+id/checkBox"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="CheckBox" />
-
-                </TableRow>
-
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp">
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="274dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ingredient_name"
-                        android:textSize="16sp" />
-
-
-                    <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="52dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/amount"
-                        android:textSize="16sp" />
-
-
-
-                    <CheckBox
-                        android:id="@+id/checkBox"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="CheckBox" />
-                </TableRow>
-
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp">
-
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="274dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ingredient_name"
-                        android:textSize="16sp" />
-
-
-                    <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="52dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/amount"
-                        android:textSize="16sp" />
-
-
-
-                    <CheckBox
-                        android:id="@+id/checkBox"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="CheckBox" />
-
-                </TableRow>
-
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp">
-
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="274dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ingredient_name"
-                        android:textSize="16sp" />
-
-
-                    <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="52dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/amount"
-                        android:textSize="16sp" />
-
-
-
-                    <CheckBox
-                        android:id="@+id/checkBox"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="CheckBox" />
-                </TableRow>
-
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp">
-
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="274dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ingredient_name"
-                        android:textSize="16sp" />
-
-
-                    <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="52dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/amount"
-                        android:textSize="16sp" />
-
-
-
-                    <CheckBox
-                        android:id="@+id/checkBox"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="CheckBox" />
-
-                </TableRow>
-
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp">
+                        app:srcCompat="@drawable/pantry" />
 
                     <TextView
                         android:id="@+id/textView9"
@@ -323,27 +138,24 @@
                         android:text="Coconut Milk"
                         android:textSize="16sp" />
 
-                    <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="52dp"
-                        android:layout_height="wrap_content"
-                        android:text="1L"
-                        android:textSize="16sp" />
-
-                    <CheckBox
-                        android:id="@+id/checkBox"
+                    <ImageView
+                        android:id="@+id/imageView10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CheckBox" />
-
+                        app:srcCompat="@drawable/baseline_delete_24" />
                 </TableRow>
-
 
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/pantry" />
 
                     <TextView
                         android:id="@+id/textView9"
@@ -352,27 +164,24 @@
                         android:text="Coconut Milk"
                         android:textSize="16sp" />
 
-                    <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="52dp"
-                        android:layout_height="wrap_content"
-                        android:text="1L"
-                        android:textSize="16sp" />
-
-                    <CheckBox
-                        android:id="@+id/checkBox"
+                    <ImageView
+                        android:id="@+id/imageView10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CheckBox" />
-
+                        app:srcCompat="@drawable/baseline_delete_24" />
                 </TableRow>
-
 
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/pantry" />
 
                     <TextView
                         android:id="@+id/textView9"
@@ -381,27 +190,23 @@
                         android:text="Coconut Milk"
                         android:textSize="16sp" />
 
-                    <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="52dp"
-                        android:layout_height="wrap_content"
-                        android:text="1L"
-                        android:textSize="16sp" />
-
-                    <CheckBox
-                        android:id="@+id/checkBox"
+                    <ImageView
+                        android:id="@+id/imageView10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CheckBox" />
-
+                        app:srcCompat="@drawable/baseline_delete_24" />
                 </TableRow>
-
-
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/pantry" />
 
                     <TextView
                         android:id="@+id/textView9"
@@ -410,27 +215,23 @@
                         android:text="Coconut Milk"
                         android:textSize="16sp" />
 
-                    <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="52dp"
-                        android:layout_height="wrap_content"
-                        android:text="1L"
-                        android:textSize="16sp" />
-
-                    <CheckBox
-                        android:id="@+id/checkBox"
+                    <ImageView
+                        android:id="@+id/imageView10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CheckBox" />
-
+                        app:srcCompat="@drawable/baseline_delete_24" />
                 </TableRow>
-
-
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/pantry" />
 
                     <TextView
                         android:id="@+id/textView9"
@@ -439,27 +240,23 @@
                         android:text="Coconut Milk"
                         android:textSize="16sp" />
 
-                    <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="52dp"
-                        android:layout_height="wrap_content"
-                        android:text="1L"
-                        android:textSize="16sp" />
-
-                    <CheckBox
-                        android:id="@+id/checkBox"
+                    <ImageView
+                        android:id="@+id/imageView10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CheckBox" />
-
+                        app:srcCompat="@drawable/baseline_delete_24" />
                 </TableRow>
-
-
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/pantry" />
 
                     <TextView
                         android:id="@+id/textView9"
@@ -468,27 +265,23 @@
                         android:text="Coconut Milk"
                         android:textSize="16sp" />
 
-                    <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="52dp"
-                        android:layout_height="wrap_content"
-                        android:text="1L"
-                        android:textSize="16sp" />
-
-                    <CheckBox
-                        android:id="@+id/checkBox"
+                    <ImageView
+                        android:id="@+id/imageView10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CheckBox" />
-
+                        app:srcCompat="@drawable/baseline_delete_24" />
                 </TableRow>
-
-
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/pantry" />
 
                     <TextView
                         android:id="@+id/textView9"
@@ -497,24 +290,87 @@
                         android:text="Coconut Milk"
                         android:textSize="16sp" />
 
-                    <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="52dp"
-                        android:layout_height="wrap_content"
-                        android:text="1L"
-                        android:textSize="16sp" />
-
-                    <CheckBox
-                        android:id="@+id/checkBox"
+                    <ImageView
+                        android:id="@+id/imageView10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CheckBox" />
-
+                        app:srcCompat="@drawable/baseline_delete_24" />
                 </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
 
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/pantry" />
 
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="274dp"
+                        android:layout_height="wrap_content"
+                        android:text="Coconut Milk"
+                        android:textSize="16sp" />
 
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/baseline_delete_24" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
 
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/pantry" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="274dp"
+                        android:layout_height="wrap_content"
+                        android:text="Coconut Milk"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/baseline_delete_24" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/pantry" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="274dp"
+                        android:layout_height="wrap_content"
+                        android:text="Coconut Milk"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/baseline_delete_24" />
+                </TableRow>
             </TableLayout>
         </LinearLayout>
     </ScrollView>
@@ -528,23 +384,12 @@
         android:layout_marginEnd="165dp"
         android:layout_marginBottom="140dp"
         android:backgroundTint="#D10303"
-        android:text="Delete Selected"
+        android:text="clear all"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/pantry_nav_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
-
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="81dp"
-        android:layout_height="78dp"
-        android:layout_marginStart="154dp"
-        android:layout_marginEnd="176dp"
-        app:layout_constraintBottom_toTopOf="@+id/deleteselectedbtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/round_add_circle_24" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

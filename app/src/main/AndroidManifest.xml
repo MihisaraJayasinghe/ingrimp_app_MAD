@@ -12,6 +12,15 @@
         android:theme="@style/Theme.MADUI"
         tools:targetApi="31">
         <activity
+            android:name=".viewIngredientsAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".addIngredintAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".addIngredToGrocery"
+            android:exported="false" />
+        <activity
             android:name=".Loading"
             android:exported="false" />
         <activity
