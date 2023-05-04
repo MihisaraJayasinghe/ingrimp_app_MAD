@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1064812943314",
+    "project_id": "missionmad-fbcad",
+    "storage_bucket": "missionmad-fbcad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064812943314:android:144720aa482415c4abda0b",
+        "android_client_info": {
+          "package_name": "com.example.missionmad2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1064812943314-mk3tdp084gq6v7uu56lfrtol4pn1s437.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBF_shucAIrLPoJ6xs4rbku6iQAtEPQxAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1064812943314-mk3tdp084gq6v7uu56lfrtol4pn1s437.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
