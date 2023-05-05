@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="Employee Name"
+        android:hint="Recipe Name"
         android:inputType="textPersonName" />
 
     <EditText
@@ -18,8 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Employee Age" />
-
+        android:hint="Recipe ingredients" />
 
     <Button
         android:id="@+id/btnUpdateData"

@@ -9,11 +9,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.missionmad2.R
-import com.example.missionmad2.R.id.btnUpdate
-import com.example.missionmad2.models.EmployeeModel
+import com.example.missionmad2.models.groceryModel
 import com.google.firebase.database.FirebaseDatabase
 
-class EmployeeDetailsActivity : AppCompatActivity() {
+class GroceriesDetailsActivity : AppCompatActivity() {
 
     private lateinit var tvEmpId: TextView
     private lateinit var tvEmpName: TextView
@@ -28,7 +27,7 @@ class EmployeeDetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_employee_details)
+        setContentView(R.layout.activity_groceries_details)
 
         initView()
         setValuesToViews()
@@ -37,7 +36,9 @@ class EmployeeDetailsActivity : AppCompatActivity() {
         btnUpdate.setOnClickListener {
             openUpdateDialog(
                 intent.getStringExtra("empId").toString(),
-                intent.getStringExtra("empName").toString()
+                intent.getStringExtra("empName").toString(),
+                intent.getStringExtra("empAge").toString()
+
             )
         }
 
@@ -52,13 +53,13 @@ class EmployeeDetailsActivity : AppCompatActivity() {
     private fun deleteRecord(
         id: String
     ){
-        val dbRef=FirebaseDatabase.getInstance().getReference("Employees").child(id)
+        val dbRef=FirebaseDatabase.getInstance().getReference("Groceries").child(id)
         val mTask =dbRef.removeValue()
 
         mTask.addOnSuccessListener {
-            Toast.makeText(this, "Employee data deleted",Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Groceries data deleted",Toast.LENGTH_LONG).show()
 
-            val intent = Intent( this,FetchActivity::class.java)
+            val intent = Intent( this,GroceriesFetchActivity::class.java)
             finish()
             startActivity(intent)
         }.addOnFailureListener { error ->
@@ -81,18 +82,20 @@ class EmployeeDetailsActivity : AppCompatActivity() {
         tvEmpAge.text = intent.getStringExtra("empAge")
 
 
+
     }
 
     private fun openUpdateDialog(
         empId: String,
         empName: String,
+        empAge:String,
 
 
-    ){
+        ){
 
         val mDialog = AlertDialog.Builder(this)
         val inflater = layoutInflater
-        val mDialogView = inflater.inflate(R.layout.update_dialog,null)
+        val mDialogView = inflater.inflate(R.layout.update_dialog_groceries,null)
 
         mDialog.setView(mDialogView)
 
@@ -112,9 +115,11 @@ class EmployeeDetailsActivity : AppCompatActivity() {
             updateEmpData(
                 empId,
                 etEmpName.text.toString(),
-                etEmpAge.text.toString()
+                etEmpAge.text.toString(),
+
+
             )
-            Toast.makeText(applicationContext,"employee data updated",Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext,"Groceries data updated",Toast.LENGTH_LONG).show()
 
             tvEmpName.text=etEmpName.text.toString()
             tvEmpAge.text=etEmpAge.text.toString()
@@ -125,12 +130,13 @@ class EmployeeDetailsActivity : AppCompatActivity() {
 
     }
     private fun updateEmpData(
-        id:String,
-        name:String,
-        age:String
+        id: String,
+        name: String,
+        age: String,
+
     ){
-        val dbRef= FirebaseDatabase.getInstance().getReference("Employees").child(id)
-        val empInfo =EmployeeModel(id,name,age,)
+        val dbRef= FirebaseDatabase.getInstance().getReference("Groceries").child(id)
+        val empInfo =groceryModel(id,name,age)
         dbRef.setValue(empInfo)
     }
 }

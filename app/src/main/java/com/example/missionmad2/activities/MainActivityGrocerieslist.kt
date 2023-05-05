@@ -8,14 +8,14 @@ import com.example.missionmad2.R
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class MainActivity : AppCompatActivity() {
+class MainActivityGrocerieslist : AppCompatActivity() {
 
     private lateinit var btnInsertData: Button
     private lateinit var btnFetchData: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_groceries_main)
 
 
         val firebase : DatabaseReference = FirebaseDatabase.getInstance().getReference()
@@ -23,12 +23,12 @@ class MainActivity : AppCompatActivity() {
         btnFetchData = findViewById(R.id.btnFetchData)
 
         btnInsertData.setOnClickListener {
-            val intent = Intent(this, InsertActivity::class.java)
+            val intent = Intent(this, InsertGroceriesActivity::class.java)
             startActivity(intent)
         }
 
         btnFetchData.setOnClickListener {
-            val intent = Intent(this, FetchActivity::class.java)
+            val intent = Intent(this, GroceriesFetchActivity::class.java)
             startActivity(intent)
         }
 

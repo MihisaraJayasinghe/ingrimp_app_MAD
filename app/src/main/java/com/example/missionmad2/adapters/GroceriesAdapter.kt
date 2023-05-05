@@ -6,11 +6,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.missionmad2.R
-import com.example.missionmad2.models.EmployeeModel
+import com.example.missionmad2.models.groceryModel
 
 
-class EmpAdapter (private val empList: ArrayList<EmployeeModel>) :
-    RecyclerView.Adapter<EmpAdapter.ViewHolder>(){
+class GroceriesAdapter (private val empList: ArrayList<groceryModel>) :
+    RecyclerView.Adapter<GroceriesAdapter.ViewHolder>(){
 
     private lateinit var mListner: onItemClickListener
 
@@ -24,7 +24,7 @@ class EmpAdapter (private val empList: ArrayList<EmployeeModel>) :
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.emp_list_item,parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.groceries_list_item,parent, false)
         return ViewHolder(itemView , mListner)
 
     }
