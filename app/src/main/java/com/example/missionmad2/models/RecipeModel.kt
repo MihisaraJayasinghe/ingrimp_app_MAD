@@ -1,6 +1,6 @@
 package com.example.missionmad2.models
 
-data class EmployeeModel (
+data class RecipeModel (
     var empId: String? = null,
     var empName: String? = null,
     var empAge: String? = null,

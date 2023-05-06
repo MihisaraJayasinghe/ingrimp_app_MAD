@@ -8,7 +8,7 @@ import com.example.missionmad2.R
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class MainActivity : AppCompatActivity() {
+class MainActivityRecipe : AppCompatActivity() {
 
     private lateinit var btnInsertData: Button
     private lateinit var btnFetchData: Button
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         //directing to the insert data
         btnInsertData.setOnClickListener {
-            val intent = Intent(this, InsertActivity::class.java)
+            val intent = Intent(this, InsertActivityRecipe::class.java)
             startActivity(intent)
         }
 
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         //directing to the viewing page
 
         btnFetchData.setOnClickListener {
-            val intent = Intent(this, FetchActivity::class.java)
+            val intent = Intent(this, FetchActivityRecipe::class.java)
             startActivity(intent)
         }
 

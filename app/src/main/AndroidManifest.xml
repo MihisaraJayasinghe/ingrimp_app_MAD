@@ -16,16 +16,16 @@
             android:name=".activities.Login"
             android:exported="false" />
         <activity
-            android:name=".activities.EmployeeDetailsActivity"
+            android:name=".activities.RecipeDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.FetchActivity"
+            android:name=".activities.FetchActivityRecipe"
             android:exported="false" />
         <activity
-            android:name=".activities.InsertActivity"
+            android:name=".activities.InsertActivityRecipe"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".activities.MainActivityRecipe"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

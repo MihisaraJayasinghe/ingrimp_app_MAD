@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.example.missionmad2.models.EmployeeModel
+import com.example.missionmad2.models.RecipeModel
 import com.example.missionmad2.R
 import com.example.missionmad2.databinding.ActivityMainBinding
 import com.google.firebase.database.DatabaseReference
@@ -13,7 +13,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.StorageReference
 
-class InsertActivity : AppCompatActivity() {
+class InsertActivityRecipe : AppCompatActivity() {
 
 
 
@@ -76,7 +76,7 @@ class InsertActivity : AppCompatActivity() {
         val empIns  = etEmpIns.text.toString()
 
         val empId = dbRef.push().key!!
-        val employee = EmployeeModel(empId, empName, empAge, empIns)
+        val employee = RecipeModel(empId, empName, empAge, empIns)
 
 
 

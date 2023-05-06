@@ -9,18 +9,18 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.missionmad2.R
 import com.example.missionmad2.adapters.EmpAdapter
-import com.example.missionmad2.models.EmployeeModel
+import com.example.missionmad2.models.RecipeModel
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class FetchActivity : AppCompatActivity() {
+class FetchActivityRecipe : AppCompatActivity() {
 
     private lateinit var empRecyclerView: RecyclerView
     private lateinit var tvLoadingData: TextView
-    private lateinit var empList: ArrayList<EmployeeModel>
+    private lateinit var empList: ArrayList<RecipeModel>
     private lateinit var dbRef:DatabaseReference
 
 
@@ -34,7 +34,7 @@ class FetchActivity : AppCompatActivity() {
         empRecyclerView.setHasFixedSize(true)
         tvLoadingData = findViewById(R.id.tvLoadingData)
 
-        empList= arrayListOf<EmployeeModel>()
+        empList= arrayListOf<RecipeModel>()
 
         getEmployeesData()
     }
@@ -51,7 +51,7 @@ class FetchActivity : AppCompatActivity() {
                 empList.clear()
                 if(snapshot.exists()){
                     for(empSnap in snapshot.children){
-                        val empData=empSnap.getValue(EmployeeModel::class.java)
+                        val empData=empSnap.getValue(RecipeModel::class.java)
                         empList.add(empData!!)
                     }
                     val mAdapter=EmpAdapter(empList)
@@ -60,7 +60,7 @@ class FetchActivity : AppCompatActivity() {
 
                     mAdapter.setOnItemClickListener(object : EmpAdapter.onItemClickListener{
                         override fun onItemClick(position: Int) {
-                            val intent = Intent(this@FetchActivity, EmployeeDetailsActivity ::class.java)
+                            val intent = Intent(this@FetchActivityRecipe, RecipeDetailsActivity ::class.java)
 
                             //put extras
                             intent.putExtra("empId", empList[position].empId)

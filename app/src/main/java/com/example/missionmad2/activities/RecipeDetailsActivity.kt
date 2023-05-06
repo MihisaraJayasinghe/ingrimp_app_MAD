@@ -9,10 +9,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.missionmad2.R
-import com.example.missionmad2.models.EmployeeModel
+import com.example.missionmad2.models.RecipeModel
 import com.google.firebase.database.FirebaseDatabase
 
-class EmployeeDetailsActivity : AppCompatActivity() {
+class RecipeDetailsActivity : AppCompatActivity() {
 
     private lateinit var tvEmpId: TextView
     private lateinit var tvEmpName: TextView
@@ -28,7 +28,7 @@ class EmployeeDetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_employee_details)
+        setContentView(R.layout.activity_recipe_details)
 
         initView()
         setValuesToViews()
@@ -63,7 +63,7 @@ class EmployeeDetailsActivity : AppCompatActivity() {
         mTask.addOnSuccessListener {
             Toast.makeText(this, "Employee data deleted",Toast.LENGTH_LONG).show()
 
-            val intent = Intent( this,FetchActivity::class.java)
+            val intent = Intent( this,FetchActivityRecipe::class.java)
             finish()
             startActivity(intent)
         }.addOnFailureListener { error ->
@@ -127,7 +127,7 @@ class EmployeeDetailsActivity : AppCompatActivity() {
                 etEmpIns.text.toString(),
 
             )
-            Toast.makeText(applicationContext,"employee data updated",Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext,"recipies data updated",Toast.LENGTH_LONG).show()
 
             tvEmpName.text=etEmpName.text.toString()
             tvEmpAge.text=etEmpAge.text.toString()
@@ -144,7 +144,7 @@ class EmployeeDetailsActivity : AppCompatActivity() {
         ins: String
     ){
         val dbRef= FirebaseDatabase.getInstance().getReference("Employees").child(id)
-        val empInfo =EmployeeModel(id,name,age,ins)
+        val empInfo =RecipeModel(id,name,age,ins)
         dbRef.setValue(empInfo)
     }
 }
