@@ -12,7 +12,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#000000"
+        android:background="#FF5722"
         android:fontFamily="@font/lemon"
         android:paddingTop="30dp"
         android:paddingBottom="20dp"
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
 
-            android:backgroundTint="#050505"
+            android:backgroundTint="#FF5722"
             android:padding="12dp"
             android:text="Insert Recipe"
             android:textColor="@color/white"
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
 
-            android:backgroundTint="#000000"
+            android:backgroundTint="#FF5722"
             android:padding="12dp"
             android:text="View Recipes"
             android:textColor="@color/white"

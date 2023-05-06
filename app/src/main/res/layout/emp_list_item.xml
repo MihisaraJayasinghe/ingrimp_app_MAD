@@ -29,7 +29,7 @@
                 android:layout_width="390dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="44dp"
-                android:background="#040404"
+                android:background="#80FF5722"
                 android:gravity="center"
                 android:text="Emp Name"
                 android:textColor="@color/white"
@@ -41,5 +41,6 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </LinearLayout>
 </RelativeLayout>
