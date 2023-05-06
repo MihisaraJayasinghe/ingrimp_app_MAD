@@ -39,6 +39,7 @@ class FetchActivity : AppCompatActivity() {
         getEmployeesData()
     }
 
+    //getting data for the recycler view
     private fun getEmployeesData(){
         empRecyclerView.visibility= View.GONE
         tvLoadingData.visibility=View.VISIBLE

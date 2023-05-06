@@ -22,10 +22,15 @@ class MainActivity : AppCompatActivity() {
         btnInsertData = findViewById(R.id.btnInsertData)
         btnFetchData = findViewById(R.id.btnFetchData)
 
+
+        //directing to the insert data
         btnInsertData.setOnClickListener {
             val intent = Intent(this, InsertActivity::class.java)
             startActivity(intent)
         }
+
+
+        //directing to the viewing page
 
         btnFetchData.setOnClickListener {
             val intent = Intent(this, FetchActivity::class.java)

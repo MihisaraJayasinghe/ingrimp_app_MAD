@@ -6,4 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".activities.Login">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="418dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="-5dp"
+        android:background="#FF5722"
+        android:fontFamily="@font/alata"
+        android:paddingTop="50dp"
+        android:text="Login"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="295dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="129dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="294dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="59dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="133dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="139dp"
+        android:backgroundTint="#FF5722"
+        android:text="Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+    <Button
+        android:id="@+id/signinbtn"
+        android:layout_width="133dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="139dp"
+        android:backgroundTint="#000000"
+        android:text="SIgn in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,11 +15,13 @@ import com.google.firebase.storage.StorageReference
 
 class InsertActivity : AppCompatActivity() {
 
-    lateinit var binding : ActivityMainBinding
 
+
+
+
+    lateinit var binding : ActivityMainBinding
     private lateinit var storageRef: StorageReference
     private lateinit var firebaseFirestore: FirebaseFirestore
-
     private lateinit var etEmpName: EditText
     private lateinit var selectImageBtn: Button
     private lateinit var etEmpAge: EditText
@@ -51,7 +53,7 @@ class InsertActivity : AppCompatActivity() {
         etEmpIns = findViewById(R.id.etEmpIns)
         btnSaveData = findViewById(R.id.btnSaveData)
 
-
+        //database referencing
         dbRef = FirebaseDatabase.getInstance().getReference("Employees")
 
         btnSaveData.setOnClickListener{
@@ -76,6 +78,9 @@ class InsertActivity : AppCompatActivity() {
         val empId = dbRef.push().key!!
         val employee = EmployeeModel(empId, empName, empAge, empIns)
 
+
+
+        //validations
         if(empName.isEmpty()){
             etEmpName.error = "Please fill this"
         }
@@ -89,6 +94,8 @@ class InsertActivity : AppCompatActivity() {
         }
 
 
+
+        //auto clear after insertion
 
         dbRef.child(empId).setValue(employee)
             .addOnCompleteListener{

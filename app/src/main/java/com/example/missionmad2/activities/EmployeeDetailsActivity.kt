@@ -24,7 +24,7 @@ class EmployeeDetailsActivity : AppCompatActivity() {
 
 
 
-
+//
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +33,7 @@ class EmployeeDetailsActivity : AppCompatActivity() {
         initView()
         setValuesToViews()
 
+        //Update dialog
 
         btnUpdate.setOnClickListener {
             openUpdateDialog(
@@ -43,6 +44,7 @@ class EmployeeDetailsActivity : AppCompatActivity() {
             )
         }
 
+        //delete
         btnDelete.setOnClickListener {
             deleteRecord(
                 intent.getStringExtra("empId").toString()
@@ -54,6 +56,7 @@ class EmployeeDetailsActivity : AppCompatActivity() {
     private fun deleteRecord(
         id: String
     ){
+        //Toast messeges for acknowledgement
         val dbRef=FirebaseDatabase.getInstance().getReference("Employees").child(id)
         val mTask =dbRef.removeValue()
 
@@ -77,6 +80,8 @@ class EmployeeDetailsActivity : AppCompatActivity() {
         btnDelete = findViewById(R.id.btnDelete)
 
     }
+
+    //setting values for views
     private fun setValuesToViews(){
         tvEmpId.text = intent.getStringExtra("empId")
         tvEmpName.text = intent.getStringExtra("empName")
@@ -113,6 +118,7 @@ class EmployeeDetailsActivity : AppCompatActivity() {
         val alertDialog=mDialog.create()
         alertDialog.show()
 
+        //using update button
         btnUpdateData.setOnClickListener {
             updateEmpData(
                 empId,
