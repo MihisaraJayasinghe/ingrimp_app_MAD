@@ -17,9 +17,9 @@ class InsertGroceriesActivity : AppCompatActivity() {
 
 
 
+
     private lateinit var storageRef: StorageReference
     private lateinit var firebaseFirestore: FirebaseFirestore
-
     private lateinit var etEmpName: EditText
     private lateinit var selectImageBtn: Button
     private lateinit var etEmpAge: EditText
@@ -41,8 +41,7 @@ class InsertGroceriesActivity : AppCompatActivity() {
 
 
 
-
-
+        //setting variables
         setContentView(R.layout.activity_groceries_insert)
 
         etEmpName = findViewById(R.id.etEmpName)
@@ -63,6 +62,7 @@ class InsertGroceriesActivity : AppCompatActivity() {
     }
 
 
+    //saving data
 
 
     private fun saveEmployeeData() {

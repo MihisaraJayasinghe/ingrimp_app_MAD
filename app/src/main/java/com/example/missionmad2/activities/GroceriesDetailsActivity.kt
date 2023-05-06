@@ -21,7 +21,7 @@ class GroceriesDetailsActivity : AppCompatActivity() {
     private lateinit var btnDelete:Button
 
 
-//jghjgvhvhvhvbhjbhbub
+//setting view
 
 
 
@@ -56,6 +56,8 @@ class GroceriesDetailsActivity : AppCompatActivity() {
         val dbRef=FirebaseDatabase.getInstance().getReference("Groceries").child(id)
         val mTask =dbRef.removeValue()
 
+        //toast messeges
+
         mTask.addOnSuccessListener {
             Toast.makeText(this, "Groceries data deleted",Toast.LENGTH_LONG).show()
 
@@ -83,7 +85,10 @@ class GroceriesDetailsActivity : AppCompatActivity() {
 
 
 
+
     }
+
+    //update
 
     private fun openUpdateDialog(
         empId: String,
@@ -119,6 +124,8 @@ class GroceriesDetailsActivity : AppCompatActivity() {
 
 
             )
+
+            //toast messeges
             Toast.makeText(applicationContext,"Groceries data updated",Toast.LENGTH_LONG).show()
 
             tvEmpName.text=etEmpName.text.toString()

@@ -17,15 +17,19 @@ class MainActivityGrocerieslist : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_groceries_main)
 
-
+        //database refernce
         val firebase : DatabaseReference = FirebaseDatabase.getInstance().getReference()
         btnInsertData = findViewById(R.id.btnInsertData)
         btnFetchData = findViewById(R.id.btnFetchData)
 
+        //directing to the insert
         btnInsertData.setOnClickListener {
             val intent = Intent(this, InsertGroceriesActivity::class.java)
             startActivity(intent)
         }
+
+
+        //directing to fetch
 
         btnFetchData.setOnClickListener {
             val intent = Intent(this, GroceriesFetchActivity::class.java)

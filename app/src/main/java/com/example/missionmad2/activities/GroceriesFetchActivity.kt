@@ -38,7 +38,7 @@ class GroceriesFetchActivity : AppCompatActivity() {
 
         getEmployeesData()
     }
-
+//getting data from database
     private fun getEmployeesData(){
         empRecyclerView.visibility= View.GONE
         tvLoadingData.visibility=View.VISIBLE
