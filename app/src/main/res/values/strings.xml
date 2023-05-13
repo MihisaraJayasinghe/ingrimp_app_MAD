@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">MissionMad2</string>
+    <string name="myPantryTxt">My Pantry</string>
+    <string name="txtUpdateData">Update Data</string>
+    <string name="hintRecipeName">Recipe Name</string>
+    <string name="hintRecipeIngredients">Recipe ingredients</string>
+    <string name="pantryQuote">Save your ingredients, in our App and let us manage your pantry for you!</string>
+    <string name="txtPantryMainTitile">MY PANTRY</string>
+    <string name="btnAddItems">Add items</string>
+    <string name="btnViewPantry">View Pantry</string>
+    <string name="txtbtnUpdate">Update</string>
+    <string name="txtBtnDelete">Delete</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

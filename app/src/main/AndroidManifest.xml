@@ -7,14 +7,70 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Ingrimp"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MissionMad2"
         tools:targetApi="31">
         <activity
-            android:name=".activities.Login"
+            android:name=".activities.nav_bar"
             android:exported="false" />
+        <activity
+            android:name=".activities.fetchPantry"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MainActivityPantry"
+            android:exported="false" />
+        <activity
+            android:name=".activities.PantryFetchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.InsertPantryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.PantryDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.IngredientDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.IngredientFetchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MainActivityIngredient"
+            android:exported="false" />
+        <activity
+            android:name=".activities.InsertIngredientActivity"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".activities.MainActivityGrocerieslist"
+            android:exported="false" />
+        <activity
+            android:name=".activities.GroceriesDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.GroceriesFetchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.InsertGroceriesActivity"
+            android:exported="false" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <activity
             android:name=".activities.RecipeDetailsActivity"
             android:exported="false" />

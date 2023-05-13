@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:textAlignment="inherit"
+    tools:context=".activities.PantryFetchActivity">
+
+    <TextView
+        android:id="@+id/pantryFetchTitle"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="@string/myPantryTxt"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold|italic" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvEmp"
+        android:layout_width="411dp"
+        android:layout_height="596dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/pantry_list_item" />
+
+    <TextView
+        android:id="@+id/tvLoadingData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loading Data....."
+        android:textColor="@color/beighOrange"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/homebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="12dp"
+                android:paddingBottom="9dp"
+                app:srcCompat="@drawable/baseline_home_24" />
+
+            <ImageView
+                android:id="@+id/recipbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="12dp"
+                android:paddingBottom="9dp"
+                app:srcCompat="@drawable/baseline_fastfood_24" />
+
+            <ImageView
+                android:id="@+id/btnPantry"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="12dp"
+                android:paddingBottom="9dp"
+                app:srcCompat="@drawable/baseline_dashboard_24" />
+
+            <ImageView
+                android:id="@+id/btngrocerylist"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="12dp"
+                android:paddingBottom="9dp"
+                app:srcCompat="@drawable/baseline_shopping_cart_24" />
+
+            <ImageView
+                android:id="@+id/ingredbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="12dp"
+                android:paddingBottom="9dp"
+                app:srcCompat="@drawable/baseline_food_bank_24" />
+
+            <ImageView
+                android:id="@+id/btnprofile"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="12dp"
+                android:paddingBottom="9dp"
+                app:srcCompat="@drawable/baseline_account_circle_24" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

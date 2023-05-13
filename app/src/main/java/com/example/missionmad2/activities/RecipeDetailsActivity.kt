@@ -1,10 +1,12 @@
 package com.example.missionmad2.activities
 
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -20,6 +22,11 @@ class RecipeDetailsActivity : AppCompatActivity() {
     private lateinit var tvEmpIns :TextView
     private lateinit var btnUpdate:Button
     private lateinit var btnDelete:Button
+    private lateinit var btnPantry: ImageView
+    private lateinit var ingredbtn: ImageView
+    private lateinit var btngrocerylist: ImageView
+    private lateinit var recipbtn: ImageView
+
 
 
 
@@ -29,6 +36,39 @@ class RecipeDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recipe_details)
+        btnPantry = findViewById<ImageView>(R.id.btnPantry)
+        ingredbtn = findViewById<ImageView>(R.id.ingredbtn)
+        btngrocerylist = findViewById<ImageView>(R.id.btngrocerylist)
+        recipbtn = findViewById<ImageView>(R.id.recipbtn)
+
+
+
+
+
+
+        recipbtn.setOnClickListener {
+            val intent = Intent(this, MainActivityRecipe::class.java)
+            startActivity(intent)
+        }
+
+
+
+        btnPantry.setOnClickListener {
+            val intent = Intent(this, MainActivityPantry::class.java)
+            startActivity(intent)
+        }
+
+
+        ingredbtn.setOnClickListener {
+            val intent = Intent(this, MainActivityIngredient::class.java)
+            startActivity(intent)
+        }
+
+        btngrocerylist.setOnClickListener {
+            val intent = Intent(this, MainActivityGrocerieslist::class.java)
+            startActivity(intent)
+        }
+
 
         initView()
         setValuesToViews()

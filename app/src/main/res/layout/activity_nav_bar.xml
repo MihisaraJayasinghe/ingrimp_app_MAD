@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.nav_bar">
+
+    <LinearLayout
+        android:layout_width="414dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="680dp"
+        android:background="#000000"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/homebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="9dp"
+            android:paddingBottom="3dp"
+            app:srcCompat="@drawable/baseline_home_24" />
+
+        <ImageView
+            android:id="@+id/btnPantry"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="9dp"
+            android:paddingBottom="3dp"
+            app:srcCompat="@drawable/baseline_fastfood_24" />
+
+        <ImageView
+            android:id="@+id/btngrocerylist"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="9dp"
+            android:paddingBottom="3dp"
+            app:srcCompat="@drawable/baseline_shopping_cart_24" />
+
+        <ImageView
+            android:id="@+id/ingredbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="9dp"
+            android:paddingBottom="3dp"
+            app:srcCompat="@drawable/baseline_food_bank_24" />
+
+        <ImageView
+            android:id="@+id/btnprofile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="9dp"
+            android:paddingBottom="3dp"
+            app:srcCompat="@drawable/baseline_account_circle_24" />
+    </LinearLayout>
+</LinearLayout>

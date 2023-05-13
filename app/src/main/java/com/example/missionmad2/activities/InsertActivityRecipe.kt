@@ -1,13 +1,16 @@
 package com.example.missionmad2.activities
 
+
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import com.example.missionmad2.models.RecipeModel
 import com.example.missionmad2.R
-import com.example.missionmad2.databinding.ActivityMainBinding
+
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
@@ -19,7 +22,6 @@ class InsertActivityRecipe : AppCompatActivity() {
 
 
 
-    lateinit var binding : ActivityMainBinding
     private lateinit var storageRef: StorageReference
     private lateinit var firebaseFirestore: FirebaseFirestore
     private lateinit var etEmpName: EditText
@@ -28,6 +30,11 @@ class InsertActivityRecipe : AppCompatActivity() {
     private lateinit var etEmpIns: EditText
     private lateinit var btnSaveData: Button
     private lateinit var uploadBtn :Button
+    private lateinit var btnPantry: ImageView
+    private lateinit var ingredbtn: ImageView
+    private lateinit var btngrocerylist: ImageView
+    private lateinit var recipbtn: ImageView
+
 
 
 
@@ -35,8 +42,8 @@ class InsertActivityRecipe : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+
+
 
 
 
@@ -52,6 +59,36 @@ class InsertActivityRecipe : AppCompatActivity() {
         etEmpAge = findViewById(R.id.etEmpAge)
         etEmpIns = findViewById(R.id.etEmpIns)
         btnSaveData = findViewById(R.id.btnSaveData)
+        btnPantry = findViewById<ImageView>(R.id.btnPantry)
+        ingredbtn = findViewById<ImageView>(R.id.ingredbtn)
+        btngrocerylist = findViewById<ImageView>(R.id.btngrocerylist)
+        recipbtn = findViewById<ImageView>(R.id.recipbtn)
+
+
+
+
+        recipbtn.setOnClickListener {
+            val intent = Intent(this, MainActivityRecipe::class.java)
+            startActivity(intent)
+        }
+
+
+        btnPantry.setOnClickListener {
+            val intent = Intent(this, MainActivityPantry::class.java)
+            startActivity(intent)
+        }
+
+
+        ingredbtn.setOnClickListener {
+            val intent = Intent(this, MainActivityIngredient::class.java)
+            startActivity(intent)
+        }
+
+        btngrocerylist.setOnClickListener {
+            val intent = Intent(this, MainActivityGrocerieslist::class.java)
+            startActivity(intent)
+        }
+
 
         //database referencing
         dbRef = FirebaseDatabase.getInstance().getReference("Employees")
