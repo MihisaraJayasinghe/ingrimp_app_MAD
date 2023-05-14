@@ -152,6 +152,7 @@ class RecipeDetailsActivity : AppCompatActivity() {
 
         etEmpName.setText(intent.getStringExtra("empName").toString())
         etEmpAge.setText(intent.getStringExtra("empAge").toString())
+        etEmpIns.setText(intent.getStringExtra("empIns").toString())
 
         mDialog.setTitle("Updating $empName Record")
 
@@ -171,6 +172,7 @@ class RecipeDetailsActivity : AppCompatActivity() {
 
             tvEmpName.text=etEmpName.text.toString()
             tvEmpAge.text=etEmpAge.text.toString()
+            tvEmpIns.text=etEmpIns.text.toString()
 
             alertDialog.dismiss()
         }
