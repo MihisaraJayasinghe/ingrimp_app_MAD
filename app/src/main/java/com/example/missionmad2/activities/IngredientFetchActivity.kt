@@ -98,7 +98,7 @@ class IngredientFetchActivity : AppCompatActivity() {
 
                     mAdapter.setOnItemClickListener(object : IngredientAdapter.onItemClickListener{
                         override fun onItemClick(position: Int) {
-                            val intent = Intent(this@IngredientFetchActivity, IngredientDetailsActivity ::class.java)
+                            val intent = Intent(this@IngredientFetchActivity,IngredientDetailsActivity::class.java)
 
                             //put extras
 

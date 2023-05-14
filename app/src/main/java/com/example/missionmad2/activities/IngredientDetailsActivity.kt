@@ -1,5 +1,6 @@
 package com.example.missionmad2.activities
 
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,8 +11,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.missionmad2.R
-import com.example.missionmad2.models.IngredientModel
+import com.example.missionmad2.models.groceryModel
 import com.google.firebase.database.FirebaseDatabase
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class IngredientDetailsActivity : AppCompatActivity() {
 
@@ -22,37 +25,32 @@ class IngredientDetailsActivity : AppCompatActivity() {
     private lateinit var btnDelete:Button
     private lateinit var btnPantry: ImageView
     private lateinit var ingredbtn: ImageView
+    private lateinit var btngrocerylist: ImageView
+    private lateinit var recipbtn: ImageView
 
 
+
+
+//setting view
 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ingredient_details)
-        btnPantry = findViewById<ImageView>(R.id.btnPantry)
-        ingredbtn = findViewById<ImageView>(R.id.ingredbtn)
+
+
+
         initView()
         setValuesToViews()
 
-        //update dialog
 
-        btnUpdate.setOnClickListener {
-            openUpdateDialog(
-                intent.getStringExtra("empId").toString(),
-                intent.getStringExtra("empName").toString(),
-                intent.getStringExtra("empAge").toString()
+        btnPantry = findViewById<ImageView>(R.id.btnPantry)
+        ingredbtn = findViewById<ImageView>(R.id.ingredbtn)
+        btngrocerylist = findViewById<ImageView>(R.id.btngrocerylist)
+        recipbtn = findViewById<ImageView>(R.id.recipbtn)
 
-            )
-        }
 
-        //delete
-
-        btnDelete.setOnClickListener {
-            deleteRecord(
-                intent.getStringExtra("empId").toString()
-            )
-        }
 
 
 
@@ -67,15 +65,46 @@ class IngredientDetailsActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btngrocerylist.setOnClickListener {
+            val intent = Intent(this, MainActivityGrocerieslist::class.java)
+            startActivity(intent)
+        }
+
+
+
+        recipbtn.setOnClickListener {
+            val intent = Intent(this, MainActivityRecipe::class.java)
+            startActivity(intent)
+        }
+
+
+
+
+
+        btnUpdate.setOnClickListener {
+            openUpdateDialog(
+                intent.getStringExtra("empId").toString(),
+                intent.getStringExtra("empName").toString(),
+                intent.getStringExtra("empAge").toString()
+
+            )
+        }
+
+        btnDelete.setOnClickListener {
+            deleteRecord(
+                intent.getStringExtra("empId").toString()
+            )
+        }
 
     }
 
     private fun deleteRecord(
         id: String
     ){
-        //Toast messages for acknowledgement
         val dbRef=FirebaseDatabase.getInstance().getReference("Ingredient").child(id)
         val mTask =dbRef.removeValue()
+
+        //toast messeges
 
         mTask.addOnSuccessListener {
             Toast.makeText(this, "Ingredient data deleted",Toast.LENGTH_LONG).show()
@@ -89,7 +118,7 @@ class IngredientDetailsActivity : AppCompatActivity() {
     }
     private fun initView(){
 
-
+        tvEmpId = findViewById(R.id.tvEmpId)
         tvEmpName = findViewById(R.id.tvEmpName)
         tvEmpAge = findViewById(R.id.tvEmpAge)
 
@@ -97,8 +126,6 @@ class IngredientDetailsActivity : AppCompatActivity() {
         btnDelete = findViewById(R.id.btnDelete)
 
     }
-
-    //setting values for views
     private fun setValuesToViews(){
         tvEmpId.text = intent.getStringExtra("empId")
         tvEmpName.text = intent.getStringExtra("empName")
@@ -106,7 +133,10 @@ class IngredientDetailsActivity : AppCompatActivity() {
 
 
 
+
     }
+
+    //update
 
     private fun openUpdateDialog(
         empId: String,
@@ -118,11 +148,11 @@ class IngredientDetailsActivity : AppCompatActivity() {
 
         val mDialog = AlertDialog.Builder(this)
         val inflater = layoutInflater
-        val mDialogView = inflater.inflate(R.layout.update_dialog_ingredient,null)
+        val mDialogView = inflater.inflate(R.layout.update_dialog_groceries,null)
 
         mDialog.setView(mDialogView)
 
-       val etEmpName = mDialogView.findViewById<EditText>(R.id.etEmpName)
+        val etEmpName = mDialogView.findViewById<EditText>(R.id.etEmpName)
         val etEmpAge = mDialogView.findViewById<EditText>(R.id.etEmpAge)
         val btnUpdateData  =mDialogView.findViewById<Button>(R.id.btnUpdateData)
 
@@ -134,7 +164,6 @@ class IngredientDetailsActivity : AppCompatActivity() {
         val alertDialog=mDialog.create()
         alertDialog.show()
 
-        // using update button
         btnUpdateData.setOnClickListener {
             updateEmpData(
                 empId,
@@ -142,7 +171,9 @@ class IngredientDetailsActivity : AppCompatActivity() {
                 etEmpAge.text.toString(),
 
 
-            )
+                )
+
+            //toast messeges
             Toast.makeText(applicationContext,"Ingredient data updated",Toast.LENGTH_LONG).show()
 
             tvEmpName.text=etEmpName.text.toString()
@@ -158,9 +189,9 @@ class IngredientDetailsActivity : AppCompatActivity() {
         name: String,
         age: String,
 
-    ){
+        ){
         val dbRef= FirebaseDatabase.getInstance().getReference("Ingredient").child(id)
-        val empInfo =IngredientModel(id,name,age)
+        val empInfo =groceryModel(id,name,age)
         dbRef.setValue(empInfo)
     }
 }
