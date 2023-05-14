@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ingimp"
+    android:textAlignment="center"
+    tools:context=".activities.HomeActivity">
+
+    <Button
+        android:id="@+id/groceryList_btn"
+        android:layout_width="136dp"
+        android:layout_height="134dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/recipe_management_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.291" />
+
+    <Button
+        android:id="@+id/ingredient_Management_btn"
+        android:layout_width="136dp"
+        android:layout_height="134dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/my_pantry_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.661" />
+
+    <Button
+        android:id="@+id/recipe_management_btn"
+        android:layout_width="136dp"
+        android:layout_height="134dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/groceryList_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.291" />
+
+    <Button
+        android:id="@+id/my_pantry_btn"
+        android:layout_width="136dp"
+        android:layout_height="134dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ingredient_Management_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.661" />
+
+    <Button
+        android:id="@+id/my_profile_btn"
+        android:layout_width="179dp"
+        android:layout_height="64dp"
+        android:backgroundTint="#000000"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.955" />
+
+    <Button
+        android:id="@+id/log_out_btn"
+        android:layout_width="179dp"
+        android:layout_height="64dp"
+        android:backgroundTint="#000000"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.955" />
+
+    <TextView
+        android:id="@+id/Home_txt"
+        android:layout_width="249dp"
+        android:layout_height="72dp"
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="Home"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.076" />
+
+    <ImageView
+        android:id="@+id/grocery_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shopping_cart_90"
+        app:layout_constraintBottom_toBottomOf="@+id/groceryList_btn"
+        app:layout_constraintEnd_toEndOf="@+id/groceryList_btn"
+        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintStart_toStartOf="@+id/groceryList_btn"
+        app:layout_constraintTop_toTopOf="@+id/groceryList_btn"
+        app:layout_constraintVertical_bias="0.181" />
+
+    <TextView
+        android:id="@+id/groceryList_btn_txt"
+        android:layout_width="93dp"
+        android:layout_height="19dp"
+        android:text="Grocery List"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/groceryList_btn"
+        app:layout_constraintEnd_toEndOf="@+id/groceryList_btn"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="@+id/groceryList_btn"
+        app:layout_constraintTop_toTopOf="@+id/groceryList_btn"
+        app:layout_constraintVertical_bias="0.852" />
+
+    <ImageView
+        android:id="@+id/recipe_management_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/recipe_list_90"
+        app:layout_constraintBottom_toBottomOf="@+id/recipe_management_btn"
+        app:layout_constraintEnd_toEndOf="@+id/recipe_management_btn"
+        app:layout_constraintStart_toStartOf="@+id/recipe_management_btn"
+        app:layout_constraintTop_toTopOf="@+id/recipe_management_btn"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/recipe_management_txt"
+        android:layout_width="105dp"
+        android:layout_height="34dp"
+        android:text="Recipe      Management"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/recipe_management_btn"
+        app:layout_constraintEnd_toEndOf="@+id/recipe_management_btn"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="@+id/recipe_management_btn"
+        app:layout_constraintTop_toTopOf="@+id/recipe_management_btn"
+        app:layout_constraintVertical_bias="0.91" />
+
+    <ImageView
+        android:id="@+id/my_pantry_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/my_pantry_90"
+        app:layout_constraintBottom_toBottomOf="@+id/my_pantry_btn"
+        app:layout_constraintEnd_toEndOf="@+id/my_pantry_btn"
+        app:layout_constraintStart_toStartOf="@+id/my_pantry_btn"
+        app:layout_constraintTop_toTopOf="@+id/my_pantry_btn"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TextView
+        android:id="@+id/my_pantry_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Pantry"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/my_pantry_btn"
+        app:layout_constraintEnd_toEndOf="@+id/my_pantry_btn"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toStartOf="@+id/my_pantry_btn"
+        app:layout_constraintTop_toTopOf="@+id/my_pantry_btn"
+        app:layout_constraintVertical_bias="0.901" />
+
+    <ImageView
+        android:id="@+id/ingredient_management_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ingredient_90"
+        app:layout_constraintBottom_toBottomOf="@+id/ingredient_Management_btn"
+        app:layout_constraintEnd_toEndOf="@+id/ingredient_Management_btn"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="@+id/ingredient_Management_btn"
+        app:layout_constraintTop_toTopOf="@+id/ingredient_Management_btn"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TextView
+        android:id="@+id/ingredient_management_txt"
+        android:layout_width="97dp"
+        android:layout_height="32dp"
+        android:text=" Ingredient    Management"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ingredient_Management_btn"
+        app:layout_constraintEnd_toEndOf="@+id/ingredient_Management_btn"
+        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintStart_toStartOf="@+id/ingredient_Management_btn"
+        app:layout_constraintTop_toTopOf="@+id/ingredient_Management_btn"
+        app:layout_constraintVertical_bias="0.904" />
+
+    <ImageView
+        android:id="@+id/log_out_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:src="@drawable/logout_24"
+        app:layout_constraintBottom_toBottomOf="@+id/log_out_btn"
+        app:layout_constraintStart_toStartOf="@+id/log_out_btn"
+        app:layout_constraintTop_toTopOf="@+id/log_out_btn"
+        app:layout_constraintVertical_bias="0.475" />
+
+    <TextView
+        android:id="@+id/log_out_txt"
+        android:layout_width="50dp"
+        android:layout_height="21dp"
+        android:text="Log Out"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/log_out_btn"
+        app:layout_constraintEnd_toEndOf="@+id/log_out_btn"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/log_out_btn"
+        app:layout_constraintTop_toTopOf="@+id/log_out_btn"
+        app:layout_constraintVertical_bias="0.511" />
+
+    <ImageView
+        android:id="@+id/my_profile_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/profile_24"
+        app:layout_constraintBottom_toBottomOf="@+id/my_profile_btn"
+        app:layout_constraintEnd_toEndOf="@+id/my_profile_btn"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="@+id/my_profile_btn"
+        app:layout_constraintTop_toTopOf="@+id/my_profile_btn"
+        app:layout_constraintVertical_bias="0.475" />
+
+    <TextView
+        android:id="@+id/my_profile_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Profile"
+        android:textAlignment="center"
+        android:textColor="#F8F8F8"
+        app:layout_constraintBottom_toBottomOf="@+id/my_profile_btn"
+        app:layout_constraintEnd_toEndOf="@+id/my_profile_btn"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="@+id/my_profile_btn"
+        app:layout_constraintTop_toTopOf="@+id/my_profile_btn"
+        app:layout_constraintVertical_bias="0.488" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
