@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -23,6 +24,10 @@ class fetchPantry : AppCompatActivity() {
     private lateinit var tvLoadingData: TextView
     private lateinit var empList: ArrayList<pantryModel>
     private lateinit var dbRef:DatabaseReference
+    private lateinit var btnPantry: ImageView
+    private lateinit var ingredbtn: ImageView
+    private lateinit var btngrocerylist: ImageView
+    private lateinit var recipbtn: ImageView
 
 
 
@@ -34,8 +39,37 @@ class fetchPantry : AppCompatActivity() {
         empRecyclerView.layoutManager = LinearLayoutManager(this)
         empRecyclerView.setHasFixedSize(true)
         tvLoadingData = findViewById(R.id.tvLoadingData)
+        btnPantry = findViewById<ImageView>(R.id.btnPantry)
+        ingredbtn = findViewById<ImageView>(R.id.ingredbtn)
+        btngrocerylist = findViewById<ImageView>(R.id.btngrocerylist)
+        recipbtn = findViewById<ImageView>(R.id.recipbtn)
 
         empList= arrayListOf<pantryModel>()
+
+
+
+        btnPantry.setOnClickListener {
+            val intent = Intent(this, MainActivityPantry::class.java)
+            startActivity(intent)
+        }
+
+
+        ingredbtn.setOnClickListener {
+            val intent = Intent(this, MainActivityIngredient::class.java)
+            startActivity(intent)
+        }
+
+        btngrocerylist.setOnClickListener {
+            val intent = Intent(this, MainActivityGrocerieslist::class.java)
+            startActivity(intent)
+        }
+
+        recipbtn.setOnClickListener {
+            val intent = Intent(this, MainActivityRecipe::class.java)
+            startActivity(intent)
+        }
+
+
 
         getEmployeesData()
     }
@@ -63,8 +97,7 @@ class fetchPantry : AppCompatActivity() {
                             val intent = Intent(this@fetchPantry, PantryDetailsActivity ::class.java)
 
                             //put extras
-                            intent.putExtra("empId", empList[position].empId)
-                            intent.putExtra("empName", empList[position].empName)
+                                     intent.putExtra("empName", empList[position].empName)
                             intent.putExtra("empAge", empList[position].empAge)
 
 

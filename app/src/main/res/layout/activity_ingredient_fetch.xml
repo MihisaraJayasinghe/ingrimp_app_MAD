@@ -5,6 +5,7 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ingimp"
     tools:context=".activities.IngredientFetchActivity">
 
     <TextView
@@ -26,20 +27,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"></LinearLayout>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvEmp"
-        android:layout_width="413dp"
-        android:layout_height="624dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="385dp"
+        android:layout_height="451dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="140dp"
         tools:listitem="@layout/ingredient_list_item">
 
     </androidx.recyclerview.widget.RecyclerView>
@@ -55,8 +49,7 @@
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"

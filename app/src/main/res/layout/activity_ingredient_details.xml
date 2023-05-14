@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ingimp"
     tools:context=".activities.IngredientDetailsActivity">
 
     <Button
@@ -33,8 +34,8 @@
 
     <TextView
         android:id="@+id/tvEmpName"
-        android:layout_width="344dp"
-        android:layout_height="49dp"
+        android:layout_width="399dp"
+        android:layout_height="75dp"
         android:layout_marginTop="56dp"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"

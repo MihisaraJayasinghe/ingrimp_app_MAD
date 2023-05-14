@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/ingimp"
     tools:context=".activities.MainActivityRecipe">
 
 
@@ -67,7 +67,7 @@
         android:layout_marginStart="70dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="69dp"
-        android:fontFamily="@font/leckerli_one"
+        android:fontFamily="@font/montserrat_alternates"
         android:text="Visit the recipies and add new recipies to the system. "
         android:textAlignment="center"
         android:textSize="24sp"

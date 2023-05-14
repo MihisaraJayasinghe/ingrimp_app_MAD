@@ -30,6 +30,9 @@
         <activity
             android:name=".activities.PantryDetailsActivity"
             android:exported="false" />
+
+
+
         <activity
             android:name=".activities.IngredientDetailsActivity"
             android:exported="false" />

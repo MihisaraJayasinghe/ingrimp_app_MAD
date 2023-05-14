@@ -102,7 +102,7 @@ class GroceriesFetchActivity : AppCompatActivity() {
                             val intent = Intent(this@GroceriesFetchActivity, GroceriesDetailsActivity ::class.java)
 
                             //put extras
-                            intent.putExtra("empId", empList[position].empId)
+
                             intent.putExtra("empName", empList[position].empName)
                             intent.putExtra("empAge", empList[position].empAge)
 

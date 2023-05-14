@@ -16,6 +16,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import android.view.animation.AnimationUtils
+import android.widget.ImageView
 
 class FetchActivityRecipe : AppCompatActivity() {
 
@@ -23,6 +24,10 @@ class FetchActivityRecipe : AppCompatActivity() {
     private lateinit var tvLoadingData: TextView
     private lateinit var empList: ArrayList<RecipeModel>
     private lateinit var dbRef:DatabaseReference
+    private lateinit var btnPantry: ImageView
+    private lateinit var ingredbtn: ImageView
+    private lateinit var btngrocerylist: ImageView
+    private lateinit var recipbtn: ImageView
 
 
 
@@ -34,6 +39,35 @@ class FetchActivityRecipe : AppCompatActivity() {
         empRecyclerView.layoutManager = LinearLayoutManager(this)
         empRecyclerView.setHasFixedSize(true)
         tvLoadingData = findViewById(R.id.tvLoadingData)
+        btnPantry = findViewById<ImageView>(R.id.btnPantry)
+        ingredbtn = findViewById<ImageView>(R.id.ingredbtn)
+        btngrocerylist = findViewById<ImageView>(R.id.btngrocerylist)
+        recipbtn = findViewById<ImageView>(R.id.recipbtn)
+
+
+
+
+
+        btnPantry.setOnClickListener {
+            val intent = Intent(this, MainActivityPantry::class.java)
+            startActivity(intent)
+        }
+
+
+        ingredbtn.setOnClickListener {
+            val intent = Intent(this, MainActivityIngredient::class.java)
+            startActivity(intent)
+        }
+
+        btngrocerylist.setOnClickListener {
+            val intent = Intent(this, MainActivityGrocerieslist::class.java)
+            startActivity(intent)
+        }
+
+        recipbtn.setOnClickListener {
+            val intent = Intent(this, MainActivityRecipe::class.java)
+            startActivity(intent)
+        }
 
         empList= arrayListOf<RecipeModel>()
 
@@ -64,7 +98,7 @@ class FetchActivityRecipe : AppCompatActivity() {
                             val intent = Intent(this@FetchActivityRecipe, RecipeDetailsActivity ::class.java)
 
                             //put extras
-                            intent.putExtra("empId", empList[position].empId)
+
                             intent.putExtra("empName", empList[position].empName)
                             intent.putExtra("empAge", empList[position].empAge)
                             intent.putExtra("empIns", empList[position].empIns)

@@ -3,5 +3,7 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/alata</item>
         <item>@font/lemon</item>
+        <item>@font/montserrat_alternates</item>
+        <item>@font/montserrat_subrayada</item>
     </array>
 </resources>

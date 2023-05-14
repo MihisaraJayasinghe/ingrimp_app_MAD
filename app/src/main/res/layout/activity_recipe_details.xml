@@ -34,8 +34,8 @@
 
     <TextView
         android:id="@+id/tvEmpName"
-        android:layout_width="156dp"
-        android:layout_height="42dp"
+        android:layout_width="395dp"
+        android:layout_height="79dp"
         android:layout_marginTop="24dp"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,7 +73,6 @@
         android:id="@+id/textView7"
         android:layout_width="398dp"
         android:layout_height="60dp"
-        android:layout_marginTop="28dp"
         android:background="#FF5722"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
@@ -83,24 +82,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEmpAge" />
+        tools:layout_editor_absoluteY="370dp" />
 
-    <MultiAutoCompleteTextView
-        android:id="@+id/tvEmpIns"
-        android:layout_width="359dp"
-        android:layout_height="122dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-    <MultiAutoCompleteTextView
+    <TextView
         android:id="@+id/tvEmpAge"
-        android:layout_width="365dp"
-        android:layout_height="113dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="25dp"
+        android:layout_width="364dp"
+        android:layout_height="134dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -169,5 +159,14 @@
             android:paddingBottom="9dp"
             app:srcCompat="@drawable/baseline_account_circle_24" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvEmpIns"
+        android:layout_width="359dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -101,7 +101,7 @@ class IngredientFetchActivity : AppCompatActivity() {
                             val intent = Intent(this@IngredientFetchActivity, IngredientDetailsActivity ::class.java)
 
                             //put extras
-                            intent.putExtra("empId", empList[position].empId)
+
                             intent.putExtra("empName", empList[position].empName)
                             intent.putExtra("empAge", empList[position].empAge)
 
