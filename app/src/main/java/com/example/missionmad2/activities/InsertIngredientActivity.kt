@@ -38,14 +38,9 @@ class InsertIngredientActivity : AppCompatActivity() {
 
     private lateinit var dbRef : DatabaseReference
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
-
-
-
-
 
 
 
@@ -88,9 +83,6 @@ class InsertIngredientActivity : AppCompatActivity() {
         btnSaveData.setOnClickListener{
             saveEmployeeData()
         }
-
-
-
 
 
     }
