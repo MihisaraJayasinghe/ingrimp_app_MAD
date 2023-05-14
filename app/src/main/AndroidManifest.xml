@@ -30,9 +30,6 @@
         <activity
             android:name=".activities.PantryDetailsActivity"
             android:exported="false" />
-
-
-
         <activity
             android:name=".activities.IngredientDetailsActivity"
             android:exported="false" />
@@ -45,8 +42,6 @@
         <activity
             android:name=".activities.InsertIngredientActivity"
             android:exported="false" />
-
-
         <activity
             android:name=".activities.MainActivityGrocerieslist"
             android:exported="false" />
@@ -62,16 +57,11 @@
         <activity
             android:name=".activities.HomeActivity"
             android:exported="false" />
-
-
-
-
         <activity
             android:name=".activities.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

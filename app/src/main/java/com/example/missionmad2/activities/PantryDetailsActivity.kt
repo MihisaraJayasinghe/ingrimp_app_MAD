@@ -24,6 +24,7 @@ class PantryDetailsActivity : AppCompatActivity() {
     private lateinit var ingredbtn: ImageView
     private lateinit var btngrocerylist: ImageView
     private lateinit var recipbtn: ImageView
+    private lateinit var homebtn: ImageView
 
 
 
@@ -38,11 +39,14 @@ class PantryDetailsActivity : AppCompatActivity() {
         ingredbtn = findViewById<ImageView>(R.id.ingredbtn)
         btngrocerylist = findViewById<ImageView>(R.id.btngrocerylist)
         recipbtn = findViewById<ImageView>(R.id.recipbtn)
+        homebtn = findViewById<ImageView>(R.id.homebtn)
 
 
 
-
-
+        homebtn.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
 
         recipbtn.setOnClickListener {
             val intent = Intent(this, MainActivityRecipe::class.java)

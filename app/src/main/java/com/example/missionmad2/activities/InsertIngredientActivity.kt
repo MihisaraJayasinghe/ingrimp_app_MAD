@@ -33,6 +33,7 @@ class InsertIngredientActivity : AppCompatActivity() {
     private lateinit var btnPantry: ImageView
     private lateinit var ingredbtn: ImageView
     private lateinit var btngrocerylist: ImageView
+    private lateinit var homebtn: ImageView
 
 
 
@@ -53,12 +54,18 @@ class InsertIngredientActivity : AppCompatActivity() {
         etEmpAge = findViewById(R.id.etEmpAge)
         btnSaveData = findViewById(R.id.btnSaveData)
         recipbtn = findViewById<ImageView>(R.id.recipbtn)
-
+        homebtn = findViewById<ImageView>(R.id.homebtn)
 
         //database referencing
         dbRef = FirebaseDatabase.getInstance().getReference("Ingredient")
 
 
+
+
+        homebtn.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
         btnPantry.setOnClickListener {
             val intent = Intent(this, MainActivityPantry::class.java)
             startActivity(intent)

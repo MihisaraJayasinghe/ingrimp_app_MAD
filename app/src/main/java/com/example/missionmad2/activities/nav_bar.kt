@@ -13,7 +13,7 @@ class nav_bar : AppCompatActivity() {
 
     private lateinit var btnPantry: ImageView
     private lateinit var ingredbtn: ImageView
-
+    private lateinit var homebtn: ImageView
 
 
 
@@ -25,8 +25,14 @@ class nav_bar : AppCompatActivity() {
 
         btnPantry = findViewById<ImageView>(R.id.btnPantry)
         ingredbtn = findViewById<ImageView>(R.id.ingredbtn)
+        homebtn = findViewById<ImageView>(R.id.homebtn)
 
 
+
+        homebtn.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
         btnPantry.setOnClickListener {
             val intent = Intent(this, MainActivityPantry::class.java)
             startActivity(intent)
