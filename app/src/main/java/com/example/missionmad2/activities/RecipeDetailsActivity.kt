@@ -97,11 +97,11 @@ class RecipeDetailsActivity : AppCompatActivity() {
         id: String
     ){
         //Toast messeges for acknowledgement
-        val dbRef=FirebaseDatabase.getInstance().getReference("Employees").child(id)
+        val dbRef=FirebaseDatabase.getInstance().getReference("Recipe").child(id)
         val mTask =dbRef.removeValue()
 
         mTask.addOnSuccessListener {
-            Toast.makeText(this, "Employee data deleted",Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Recipe data deleted",Toast.LENGTH_LONG).show()
 
             val intent = Intent( this,FetchActivityRecipe::class.java)
             finish()
@@ -185,7 +185,7 @@ class RecipeDetailsActivity : AppCompatActivity() {
         age: String,
         ins: String
     ){
-        val dbRef= FirebaseDatabase.getInstance().getReference("Employees").child(id)
+        val dbRef= FirebaseDatabase.getInstance().getReference("Recipe").child(id)
         val empInfo =RecipeModel(id,name,age,ins)
         dbRef.setValue(empInfo)
     }

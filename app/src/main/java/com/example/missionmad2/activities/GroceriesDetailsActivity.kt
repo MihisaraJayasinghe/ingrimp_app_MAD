@@ -101,19 +101,16 @@ class GroceriesDetailsActivity : AppCompatActivity() {
     private fun deleteRecord(
         id: String
     ){
-        val dbRef=FirebaseDatabase.getInstance().getReference("Groceries").child(id)
-        val mTask =dbRef.removeValue()
-
-        //toast messeges
-
-        mTask.addOnSuccessListener {
-            Toast.makeText(this, "Groceries data deleted",Toast.LENGTH_LONG).show()
-
-            val intent = Intent( this,GroceriesFetchActivity::class.java)
-            finish()
-            startActivity(intent)
-        }.addOnFailureListener { error ->
-            Toast.makeText(this, "Deleting Err ${error.message}",Toast.LENGTH_LONG).show()
+        val dbRef = FirebaseDatabase.getInstance().getReference("Groceries").child(id)
+        dbRef.setValue(null).addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                Toast.makeText(this, "Groceries data deleted", Toast.LENGTH_LONG).show()
+                val intent = Intent(this, GroceriesFetchActivity::class.java)
+                finish()
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "Deleting Err ${task.exception?.message}", Toast.LENGTH_LONG).show()
+            }
         }
     }
     private fun initView(){

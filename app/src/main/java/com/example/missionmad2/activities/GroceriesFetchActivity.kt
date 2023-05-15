@@ -103,6 +103,8 @@ class GroceriesFetchActivity : AppCompatActivity() {
 
                             //put extras
 
+
+                            intent.putExtra("empId", empList[position].empId)
                             intent.putExtra("empName", empList[position].empName)
                             intent.putExtra("empAge", empList[position].empAge)
 

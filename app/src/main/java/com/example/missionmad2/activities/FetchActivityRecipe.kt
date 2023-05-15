@@ -31,6 +31,7 @@ class FetchActivityRecipe : AppCompatActivity() {
 
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fetch)
@@ -43,6 +44,13 @@ class FetchActivityRecipe : AppCompatActivity() {
         ingredbtn = findViewById<ImageView>(R.id.ingredbtn)
         btngrocerylist = findViewById<ImageView>(R.id.btngrocerylist)
         recipbtn = findViewById<ImageView>(R.id.recipbtn)
+
+
+
+
+
+
+
 
 
 
@@ -79,7 +87,7 @@ class FetchActivityRecipe : AppCompatActivity() {
         empRecyclerView.visibility= View.GONE
         tvLoadingData.visibility=View.VISIBLE
 
-        dbRef=FirebaseDatabase.getInstance().getReference("Employees")
+        dbRef=FirebaseDatabase.getInstance().getReference("Recipe")
 
         dbRef.addValueEventListener(object :ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -98,7 +106,7 @@ class FetchActivityRecipe : AppCompatActivity() {
                             val intent = Intent(this@FetchActivityRecipe, RecipeDetailsActivity ::class.java)
 
                             //put extras
-
+                            intent.putExtra("empId", empList[position].empId)
                             intent.putExtra("empName", empList[position].empName)
                             intent.putExtra("empAge", empList[position].empAge)
                             intent.putExtra("empIns", empList[position].empIns)

@@ -91,7 +91,7 @@ class InsertActivityRecipe : AppCompatActivity() {
 
 
         //database referencing
-        dbRef = FirebaseDatabase.getInstance().getReference("Employees")
+        dbRef = FirebaseDatabase.getInstance().getReference("Recipe")
 
         btnSaveData.setOnClickListener{
             saveEmployeeData()
